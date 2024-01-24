@@ -1,0 +1,39 @@
+body{
+  background-color:rgba(5, 49, 138, 0.749);
+}
+
+.pair-game-container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    cursor:pointer;
+  }
+  
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 100px); /* Setează o grilă cu 4 coloane a câte 100px fiecare */
+  gap: 10px; /* Adaugă un spațiu de 10px între carduri */
+}
+
+.card {
+  width: 100px; /* Setează lățimea cardului la 100px */
+  height: 100px; /* Setează înălțimea cardului la 100px */
+  border: 3px solid #37343447; /* Adaugă un border pentru a delimita cardurile */
+  overflow: hidden; /* Asigură-te că imaginea nu depășește limitele cardului */
+  border-radius:10px;
+}
+
+.card img {
+  border:2 px solid black;
+  border-radius:10px;
+  margin:auto;
+  width: 100%; /* Face imaginea să ocupe întreaga lățime a cardului */
+  height: 100%; /* Face imaginea să ocupe întreaga înălțime a cardului */
+  object-fit: cover; /* Asigură că imaginea este acoperită complet fără a-și schimba proporțiile */
+}
+
