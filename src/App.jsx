@@ -5,7 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './PairGame.css';
 
 
-// Importă toate imaginile o dată
 import img1 from './images/Artemis.jpeg';
 import img2 from './images/RedTornado.jpeg';
 import img3 from './images/BartAllen.jpeg';
@@ -33,7 +32,8 @@ const images = [
 ];
 
 const generateRandomPairs = (images, pairsCount) => {
-  const pairs = [...images.slice(0, pairsCount), ...images.slice(0, pairsCount)];
+  const shuffledImages = images.sort(() => Math.random() -0.5)
+  const pairs = [...shuffledImages.slice(0, pairsCount), ...shuffledImages.slice(0, pairsCount)];
   const shuffledPairs = pairs.sort(() => Math.random() - 0.5);
 
   const grid = [];
@@ -70,7 +70,7 @@ const PairGame = () => {
         setMatchedPairs((prev) => [...prev, grid[row1][col1]]);
       }
 
-      setTimeout(() => setFlippedIndices([]), 1000);
+      setTimeout(() => setFlippedIndices([]), 400);
     }
   }, [flippedIndices, grid]);
 
