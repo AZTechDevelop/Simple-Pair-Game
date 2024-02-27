@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './PairGame.css';
 
-
 import img1 from './images/Artemis.jpeg';
 import img2 from './images/RedTornado.jpeg';
 import img3 from './images/BartAllen.jpeg';
